@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+/**
+ * main - prints all single digit numbers of base 10
+ * Return: returns zero
+ */
+
+int main(void)
+{
+	char c = '0';
+
+	for (; c <= '9'; c++)
+	{
+		putchar(c);
+	}
+	putchar('\n');
+	return (0);
+}
