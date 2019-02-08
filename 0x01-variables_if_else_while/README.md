@@ -1,0 +1,1 @@
+The scripts in this directory perform basic functions containing if, while, and for loops.
