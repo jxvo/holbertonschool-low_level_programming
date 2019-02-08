@@ -2,6 +2,11 @@
 #include <stdlib.h>
 #include <time.h>
 
+/**
+ * main - checks last digit of random number
+ * Return: returns zero
+ */
+
 int main(void)
 {
 	int n;
