@@ -7,18 +7,18 @@
 
 int main(void)
 {
-	char tens;
-	char ones;
+	int tens;
+	int ones;
 
-	for (tens = '0'; tens <= '9'; tens++)
+	for (tens = 48; tens <= 57; tens++)
 	{
-		for (ones = tens + 1; ones <= '9'; ones++)
+		for (ones = tens + 1; ones <= 57; ones++)
 		{
 			if (tens < ones)
 			{
 				putchar(tens);
 				putchar(ones);
-				if (tens < '8' || ones < '9')
+				if (tens < 56 || ones < 57)
 				{
 					putchar(',');
 					putchar(' ');
