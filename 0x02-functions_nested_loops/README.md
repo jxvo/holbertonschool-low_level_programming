@@ -1,0 +1,1 @@
+This projects declaring functions, creating header files, and nesting loop statements.
