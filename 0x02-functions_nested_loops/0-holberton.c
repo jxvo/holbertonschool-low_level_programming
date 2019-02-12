@@ -1,8 +1,7 @@
-#include <stdio.h>
 #include "holberton.h"
 
 /**
- * main - outputs the text 'Holberton', followed by a new line
+ * main - using header prototypes, outputs the text 'Holberton', followed by \n
  * Return: returns zero
  */
 
