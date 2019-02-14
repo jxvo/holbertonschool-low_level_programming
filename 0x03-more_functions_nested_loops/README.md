@@ -1,0 +1,1 @@
+This projects covers more functions and more nested loops, reinforcing what we have been practicing in the previous day's tasks.
