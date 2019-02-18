@@ -7,29 +7,23 @@
 
 int main(void)
 {
-	int first;
-	int second;
-	int third;
-	int fourth;
+	int a, b;
 
-	for (first = 48; first <= 57; first ++)
+	for (a = 0; a < 100; a++)
 	{
-		for (second = 48; second <= 56; second++)
+		for (b = 0; b < 100; b++)
 		{
-			for (third = 48; third <= 57; third++)
+			if (b > a)
 			{
-				for (fourth = 48; fourth <= 57; fourth++)
+				putchar((a / 10) + 48);
+				putchar((a % 10) + 48);
+				putchar(' ');
+				putchar((b / 10) + 48);
+				putchar((b % 10) + 48);
+				if (a < 98 || b < 99)
 				{
-					if (third < fourth || first < second)
-					{
-						putchar(first);
-						putchar(second);
-						putchar(' ');
-						putchar(third);
-						putchar(fourth);
-						putchar(',');
-						putchar(' ');
-					}
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}

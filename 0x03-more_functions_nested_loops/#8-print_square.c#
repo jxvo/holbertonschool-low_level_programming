@@ -1,0 +1,17 @@
+#include "holberton.h"
+
+/**
+ * print_square - prints square made of '#', followed by '\n'
+ * @size: width and length of square
+ * Return: void
+ */
+
+void print_square(int size)
+{
+	int x, y;
+
+	for (y = 0; y < size; y++)
+	{
+		for (x = 0; x < size; x++)
+	}
+}
