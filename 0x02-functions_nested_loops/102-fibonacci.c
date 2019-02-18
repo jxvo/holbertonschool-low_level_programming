@@ -11,9 +11,7 @@ int main(void)
 
 	for (x = 0; x < 50; x++)
 	{
-		printf("%d", a);
-		if (x < 49)
-			printf(", ");
+		printf("%d, ", a);
 		n = a + b;
 		a = b;
 		b = n;
