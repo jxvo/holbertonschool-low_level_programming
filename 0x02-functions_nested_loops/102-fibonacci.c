@@ -11,7 +11,9 @@ int main(void)
 
 	for (x = 0; x < 50; x++)
 	{
-		printf("%d, ", a);
+		printf("%d,", a);
+		if (x < 49)
+			putchar(' ');
 		n = a + b;
 		a = b;
 		b = n;
