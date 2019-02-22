@@ -14,6 +14,7 @@ void puts2(char *str)
 	while (*str++)
 		;
 	for (; result < str; result += 2)
-		_putchar(*result);
+		if (*result)
+			_putchar(*result);
 	_putchar('\n');
 }
