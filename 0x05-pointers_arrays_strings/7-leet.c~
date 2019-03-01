@@ -1,0 +1,23 @@
+#include "holberton.h"
+
+/**
+ * leet - encodes a string into 1337 speak
+ * @s: string to encode
+ * Return: changed string
+ */
+char *leet(char *s)
+{
+	char *c = "aAeEoOtTlL";
+	char r[] = "43071";
+	int x;
+
+	for (; *s; s++)
+	{
+		for (x = 0; *c; c++, x++)
+		{
+			if (*s == *c)
+				*s = r[x /2];
+		}
+	}
+	return (s);
+}
