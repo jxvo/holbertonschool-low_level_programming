@@ -1,0 +1,20 @@
+#include "holberton.h"
+
+/**
+ * _strpbrk - locates first occurence of any byte in @accept within @s
+ * @s: string to check
+ * @accept: bytes to check
+ * Return: pointer to rest of string after first occurence
+ */
+char *_strpbrk(char *s, char *accept)
+{
+	for (; *s; s++)
+	{
+		for (; *accept; accept++)
+		{
+			if (*s == *accept)
+				return (s);
+		}
+	}
+	return (0);
+}

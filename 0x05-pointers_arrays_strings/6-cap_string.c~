@@ -1,0 +1,21 @@
+#include "holberton.h"
+
+/**
+ * cap_string - capitalizes all words of a string
+ * @s: string to check
+ * Return: capitalized string
+ */
+char *cap_string(char *s)
+{
+	char *x, *brk = " \t\n,;.!?\"(){}";
+
+	for (x = s; *x; x++)
+	{
+		for (; *brk; brk++)
+		{
+			if (*x == *brk && *(x + 1) >= 'a' && *(x + 1) <= 'z')
+				*(x + 1) -= 32;
+		}
+	}
+	return (s);
+}
