@@ -28,6 +28,8 @@ char *argstostr(int ac, char **av)
 		for (x = 0; av[y][x]; x++, z++)
 			ret[z] = av[y][x];
 		ret[z++] = '\n';
+		if (y == ac - 1)
+			ret[z++] = '\0';
 	}
 	return (ret);
 }
