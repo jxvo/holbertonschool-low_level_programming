@@ -1,0 +1,1 @@
+This projects covers the basics of using malloc() and free() to dynamically allocate memory.
