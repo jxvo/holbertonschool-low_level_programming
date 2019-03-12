@@ -1,0 +1,1 @@
+This project covers basic use of structures and typedef.

@@ -1,0 +1,1 @@
+This project covers the preprocessing stage of the compilation process, including header files, macros, guards, and common predefined macros.
