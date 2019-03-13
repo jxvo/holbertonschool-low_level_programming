@@ -14,33 +14,41 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *doggo;
 	char *d_name, *d_owner;
 
-	doggo = malloc(sizeof(dog_t *));
+	doggo = malloc(sizeof(dog_t));
 	if (doggo == NULL)
 		return (NULL);
-       	d_name = _strdup(name);
-       	if (d_name == NULL)
-       	{
-       		free(doggo);
-       		return (NULL);
-       	}
-       	doggo->name = d_name;
-	d_owner = _strdup(owner);
-	if (d_owner == NULL)
+	doggo->name = NULL;
+	if (name != NULL)
 	{
-		free(d_name);
-		free(doggo);
-		return (NULL);
+		d_name = _strdup(name);
+		if (d_name == NULL)
+		{
+			free(doggo);
+			return (NULL);
+		}
+		doggo->name = d_name;
 	}
-	doggo->owner = d_owner;
+	doggo->owner = NULL;
+	if (owner != NULL)
+	{
+		d_owner = _strdup(owner);
+		if (d_owner == NULL)
+		{
+			free(d_name);
+			free(doggo);
+			return (NULL);
+		}
+		doggo->owner = d_owner;
+	}
 	doggo->age = age;
 	return (doggo);
 }
 
 /**
  * _strdup - allocates memory for a given string
- * @s: string to include
+ * @s: string to allocate
  *
- * Return: pointer to allocated memory
+ * Return: pointer to allocated memory in heap
  */
 char *_strdup(char *str)
 {
@@ -56,5 +64,6 @@ char *_strdup(char *str)
 		return (NULL);
 	for (x = 0; str[x]; x++)
 		ret[x] = str[x];
+	ret[x] = '\0';
 	return (ret);
 }
