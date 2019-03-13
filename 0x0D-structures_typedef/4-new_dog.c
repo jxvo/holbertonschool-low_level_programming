@@ -46,7 +46,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 /**
  * _strdup - allocates memory for a given string
- * @s: string to allocate
+ * @str: string to allocate
  *
  * Return: pointer to allocated memory in heap
  */
