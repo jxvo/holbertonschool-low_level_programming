@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include "dog.h"
+
+/**
+ * print_dog - prints doggo's information
+ * @d: pointer to doggo of struct dog
+ *
+ * Return: nothing
+ */
+void print_dog(struct dog *d)
+{
+	if (d)
+	{
+		if ((d->name))
+			printf("Name: %p\n", d);
+	}
+	else
+		return;
+}
