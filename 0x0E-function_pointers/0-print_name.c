@@ -4,7 +4,7 @@
 /**
  * print_name - prints a name out of given string and case setting function
  * @name: string name to print
- * @f: case setting function (uppercase or lowercase)
+ * @f: print function (uppercase or lowercase)
  *
  * Return: nothing
  */
