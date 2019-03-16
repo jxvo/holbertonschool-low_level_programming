@@ -1,0 +1,1 @@
+This directory covers variadic functions, using `va_start` `va_arg` and `va_end` macros.
