@@ -43,10 +43,14 @@ void print_int(va_list param)
  */
 void print_string(va_list param)
 {
-	if (param == NULL)
+	char *p = va_arg(param, char *);
+
+	if (p == NULL)
+	{
 		printf("(nil)");
-	else
-		printf("%s", va_arg(param, char *));
+		return;
+	}
+	printf("%s", p);
 }
 
 /**
