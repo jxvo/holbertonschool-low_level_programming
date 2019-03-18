@@ -61,8 +61,6 @@ void print_string(va_list param)
  */
 void print_all(const char * const format, ...)
 {
-	va_list print;
-	unsigned int x = 0, y;
 	types print_types[] = {
 		{'c', print_char},
 		{'f', print_float},
@@ -70,10 +68,12 @@ void print_all(const char * const format, ...)
 		{'s', print_string},
 		{'\0', NULL}
 	};
+	va_list print;
+	unsigned int x = 0, y;
 	char *sep1 = "", *sep2 = ", ";
 
 	va_start(print, format);
-	while (format[x] != '\0')
+	while (format != NULL && format[x] != '\0')
 	{
 		y = 0;
 		while (print_types[y].typ != '\0')
