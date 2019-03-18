@@ -4,7 +4,7 @@
 
 /**
  * print_strings - prints passed strings, with separator, followed by '\n'
- * @separator - string separator to print between strings, usually ", "
+ * @separator: string separator to print between strings, usually ", "
  * @n: constant unsigned int number of strings passed
  *
  * Return: nothing
