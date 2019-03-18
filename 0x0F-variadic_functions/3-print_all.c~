@@ -1,0 +1,78 @@
+#include <stdarg.h>
+#include <stdio.h>
+#include "variadic_functions.h"
+
+/**
+ * print_char - prints a character parameter
+ * @param: character to print
+ *
+ * Return: nothing
+ */
+void print_char(va_list param)
+{
+	printf("%c", va_arg(param, int));
+}
+
+/**
+ *
+ * print_float - prints a float parameter
+ * @param: float to print
+ *
+ * Return: nothing
+ */
+void print_float(va_list param)
+{
+	printf("%f", va_arg(param, float));
+}
+
+/**
+ * print_int - prints an integer parameter
+ * @param - integer to print
+ *
+ * Return: nothing
+ */
+void print_int(va_list param)
+{
+	printf("%d", va_arg(param, int));
+}
+
+/**
+ * print_string - prints a string parameter
+ * @param: string to print
+ *
+ * Return: nothing
+ */
+void print_string(va_list param)
+{
+	if (param == NULL)
+		printf("(nil)");
+	else
+		printf("%s", va_arg(param, char *));
+}
+
+/**
+ * print_all - prints whatever is included as parameters, followed by '\n'
+ * @format: string representing list of type of arguments passed (cifs)
+ *
+ * Return: nothing
+ */
+void print_all(const char * const format, ...)
+{
+	va_list args;
+	unsigned int i;
+	const char *fmt = format;
+	types print_types[] {
+		{'c', print_char};
+		{'f', print_float};
+		{'i', print_int};
+		{'s', print_string};
+	};
+	va_start(args, format) = fmt;
+	while (format != NULL && *fmt != '\0')
+	{
+		if (strcmp(format, types.typ) == 0)
+			print_types[i].f(args);
+		i++;
+	}
+	va_end(args);
+}
