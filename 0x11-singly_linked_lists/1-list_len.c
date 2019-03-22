@@ -10,7 +10,7 @@
 size_t list_len(const list_t *h)
 {
 	const list_t *ptr;
-	size_t count;
+	size_t count = 0;
 
 	ptr = h;
 	while (ptr != NULL)
