@@ -1,0 +1,1 @@
+This directory contains programs that develop a better understanding of when and why to se linked lists vs arrays, and how to build and use linked lists.
