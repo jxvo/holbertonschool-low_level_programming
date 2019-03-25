@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include "lists.h"
+
+/**
+ * add_nodeint - adds a node to the beginning of a listint_t list
+ * @head: pointer to pointer(s) to a list of listint_t structs
+ * @n: value of n member of new node
+ *
+ * Return: pointer to allocated memory of new node
+ */
