@@ -4,8 +4,8 @@
 #include "holberton.h"
 
 /**
- * read_textfile - reads a text file and prints it to the POSIX stdout
- * @filename: exact name of .txt file to read
+ * read_textfile - reads a text file and prints it to POSIX STDOUT_FILENO
+ * @filename: case-sensitive name of file to read
  * @letters: max number of letters to print
  *
  * Return: actual number of letters printed
@@ -13,7 +13,8 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buff;
-	int fd, rbytes, wbytes;
+	ssize_t rbytes, wbytes;
+	int fd;
 
 	if (!filename || letters <= 0)
 		return (0);
