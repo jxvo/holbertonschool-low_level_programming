@@ -1,0 +1,1 @@
+This project covers the basics on how to create, open, close, read and write files. Also file descriptors, using flags like O_RDONLY, and setting file permissions with system calls.
