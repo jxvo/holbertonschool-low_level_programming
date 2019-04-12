@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * main - prints what a user types using getline
+ *
+ * Return: always 0
+ */
+int main(void)
+{
+	char *buffer = NULL;
+	size_t bufsize = 0;
+	ssize_t characters;
+
+	printf("$ ");
+	characters = getline(&buffer, &bufsize, stdin);
+	if (characters == -1)
+		return (-1);
+	printf("You typed: %s", buffer);
+	/*printf("Characters read: %zd\nBuffer size: %zu\n", characters, bufsize);*/
+	return (0);
+}

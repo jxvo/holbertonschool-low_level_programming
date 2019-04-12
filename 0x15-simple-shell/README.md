@@ -1,0 +1,1 @@
+This directory contains sample programs, some of which may be implemented in the simple shell project.
