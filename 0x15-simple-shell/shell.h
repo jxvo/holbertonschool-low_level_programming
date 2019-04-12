@@ -10,6 +10,9 @@
 #include <fcntl.h>
 #include <sys/wait.h>
 
-char **tokenizer(char *str, ssize_t chr);
+char *_strdup(char *str);
+char *_strchr(char *str, int chr);
+size_t _strlen(const char *str);
+char **tokenizer(char *str, char *delim);
 
 #endif

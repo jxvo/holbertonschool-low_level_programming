@@ -10,10 +10,10 @@
  */
 int main(int argc, char **argv, char **envp)
 {
-	char **tokens;
-	char *buffer;
+	char **tokens, **path;
+	char *buffer, *pathbuf;
 	size_t bufsize = 0, idx = 0;
-	pid_t pid;
+	pid_t pid = 0;
 	ssize_t chr;
 	int status;
 
@@ -28,9 +28,21 @@ int main(int argc, char **argv, char **envp)
 		if (buffer[chr - 1] == '\n')
 			buffer[chr - 1] = '\0';
 
-		tokens = tokenizer(buffer, chr);
+		tokens = tokenizer(buffer, "\t ");
 		if (tokens == NULL)
 			return (-1);
+		pathbuf = getenv("PATH");
+		path = tokenizer(pathbuf, ":");
+
+		/* print path tokens */
+		idx = 0;
+		while (path[idx])
+		{
+			printf("%s\n", path[idx]);
+			idx++;
+		}
+
+/* first index will include "PATH=" */
 		pid = fork();
 		if (pid < 0)
 			perror(argv[0]);
