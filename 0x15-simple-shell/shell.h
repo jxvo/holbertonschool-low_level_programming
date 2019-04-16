@@ -13,6 +13,9 @@
 char *_strdup(char *str);
 char *_strchr(char *str, int chr);
 size_t _strlen(const char *str);
+int _strncmp(const char *first, const char *second, size_t n);
+char *pathfinder(char **envp);
+char *pathappend(char *path, char *cmd);
 char **tokenizer(char *str, char *delim);
 
 #endif

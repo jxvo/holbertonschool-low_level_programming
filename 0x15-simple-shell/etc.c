@@ -62,9 +62,79 @@ char *_strchr(char *str, int chr)
 size_t _strlen(const char *str)
 {
 	size_t i = 0;
+
 	while (str[i])
 		i++;
 	return (i);
+}
+
+/**
+ * _strncmp - sternly compares two strings up to n bytes
+ * @first: first string to compare
+ * @second: second string to compare
+ *
+ * Return: value < 0 if (first < second)
+ * value > 0 if (first > second)
+ * value = 0 if (first == second)
+ */
+int _strncmp(const char *first, const char *second, size_t n)
+{
+	size_t idx;
+
+	for (idx = 0; first[idx] && second[idx] && idx < n; idx++)
+	{
+		if (first[idx] != second[idx])
+			return (first[idx] - second[idx]);
+	}
+	return (0);
+}
+
+/**
+ * pathfinder - searches environment variables for PATH
+ * @envp: array of environment variable strings
+ *
+ * Return: not a $40,000 SUV, but a buffer to PATH env variable
+ */
+char *pathfinder(char **envp)
+{
+	size_t idx = 0;
+
+	while (envp[idx])
+	{
+		if (_strncmp(envp[idx], "PATH=", 5) == 0)
+			return (envp[idx]);
+		idx++;
+	}
+	return (NULL);
+}
+
+/**
+ * pathappend - concatenates a path token with a cmd token
+ * @path: path string to append to
+ * @cmd: command string to append
+ *
+ * Return: buffer to appended path
+ */
+char *pathappend(char *path, char *cmd)
+{
+	char *buffer;
+	size_t a = 0, b = 0;
+
+	if (cmd == 0) { cmd = ""; }
+	if (path == 0) { path = ""; }
+	buffer = malloc(sizeof(char) * _strlen(path) + _strlen(cmd) + 2);
+	if (buffer == NULL)
+		return (NULL);
+	while (path[a])
+		buffer[a] = path[a++];
+	buffer[a++] = '/';
+	while (cmd[b])
+		buffer[a + b] = cmd[b++];
+	buffer[a + b] = '\0';
+
+	printf("New path token is: %s\n", buffer);
+
+	return (buffer);
 }
 
 /**
