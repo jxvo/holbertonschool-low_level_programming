@@ -1,0 +1,15 @@
+#include "shell.h"
+
+/**
+ * _builtin- runs a built-in shell program using valid command token
+ * @token: command token to match with command in global built-in struct
+ *
+ * Return: idk
+ */
+void _builtin(char *token)
+{
+	builtin globals[] = {
+		{"exit", builtin_exit},
+		{"env". builtin_env}
+	};
+}

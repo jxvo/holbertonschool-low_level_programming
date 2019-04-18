@@ -90,13 +90,13 @@ int _strncmp(const char *first, const char *second, size_t n)
 }
 
 /**
- * pathappend - concatenates a path token with a cmd token
+ * patherizer - concatenates a path token with a cmd token
  * @path: path string to append to
  * @cmd: command string to append
  *
  * Return: buffer to appended path
  */
-char *pathappend(char *path, char *cmd)
+char *patherizer(char *path, char *cmd)
 {
 	char *buffer;
 	size_t a = 0, b = 0;
