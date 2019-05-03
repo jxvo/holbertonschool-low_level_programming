@@ -19,6 +19,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	if (new == NULL)
 		return (NULL);
 	new->n = n;
+	/* prevents seg fault by checking if head exists */
 	if (*head)
 		(*head)->prev = new;
 	new->next = *head;
