@@ -1,7 +1,8 @@
 /**
- * hash_djb2 - converts a string into a hash index using it's ascii values
+ * hash_djb2 - hash function implementing the djb2 algorithm
  * @str: string to convert
  *
+ * Description: converts a string into a hash index using it's ascii values
  * Return: unsigned long index
  */
 unsigned long int hash_djb2(const unsigned char *str)
