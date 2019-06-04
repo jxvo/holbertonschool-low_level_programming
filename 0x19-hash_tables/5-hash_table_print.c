@@ -20,9 +20,9 @@ void hash_table_print(const hash_table_t *ht)
 		node = ht->array[idx];
 		while (node)
 		{
-			printf("'%s': '%s'", node->key, node->value);
-			if (node->next != NULL)
+			if (idx < ht->size - 1)
 				printf(", ");
+			printf("'%s': '%s'", node->key, node->value);
 			node = node->next;
 		}
 	}
