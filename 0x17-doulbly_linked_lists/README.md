@@ -1,0 +1,1 @@
+This project covers doubly linked lists: what they are, how to use them, and why they are different from singly linked lists.
