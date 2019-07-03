@@ -1,4 +1,4 @@
-#include <stdlib.h>
+B#include <stdlib.h>
 #include "lists.h"
 
 /**
@@ -33,7 +33,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		*h = new;
 		return (new);
 	}
-	for(; idx && node->next; node = node->next, idx--)
+	for (; idx && node->next; node = node->next, idx--)
 		;
 	temp = node->prev;
 	if (idx > 1)
