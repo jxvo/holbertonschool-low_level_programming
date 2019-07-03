@@ -2,7 +2,7 @@
 #include "lists.h"
 
 /**
- * sum_dlistint - calculates the sum of all the data (n) if a doubly linked list
+ * sum_dlistint - calculates the sum of all values of a doubly linked list
  * @head: pointer to head node
  *
  * Return: integer result

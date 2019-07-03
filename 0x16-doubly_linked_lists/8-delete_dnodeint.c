@@ -41,9 +41,8 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 				free(node);
 				return (1);
 			}
-			/* need to prevent double freeing */
-		        if (!(node->prev) && !(node->next))
-			{
+			if (!(node->prev) && !(node->next))
+			{ /* need to prevent double freeing */
 				*head = node;
 				free(node);
 			}
