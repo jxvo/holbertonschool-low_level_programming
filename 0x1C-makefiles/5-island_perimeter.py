@@ -36,5 +36,5 @@ def island_perimeter(grid):
                 if right >= len(grid[0]):
                     perimeter += 1
                 elif grid[row][idx + 1] != 1:
-                    perimegitter += 1
+                    perimeter += 1
     return perimeter
