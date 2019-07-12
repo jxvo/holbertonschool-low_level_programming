@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """island perimether function"""
 
+
 def island_perimeter(grid):
     """returns the perimeter of an island grid from a list of integers"""
     perimeter = 0
@@ -35,5 +36,5 @@ def island_perimeter(grid):
                 if right >= len(grid[0]):
                     perimeter += 1
                 elif grid[row][idx + 1] != 1:
-                    perimeter += 1
+                    perimegitter += 1
     return perimeter
