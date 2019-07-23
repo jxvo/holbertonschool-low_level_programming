@@ -1,5 +1,0 @@
-#include "sort.h"
-
-/**
- * insertion_sort - sorts a list of ints in ascending order (insertion sort algo)
- * @list: double pointer to head node of doubly linked list
