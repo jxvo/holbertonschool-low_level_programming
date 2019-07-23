@@ -26,6 +26,7 @@ void swap_node(listint_t *node);
 
 /* array sorting algorithms */
 void bubble_sort(int *array, size_t size);
+void selection_sort(int *array, size_t size);
 
 /* list sorting algorithms */
 void insertion_sort_list(listint_t **list);
