@@ -22,9 +22,9 @@ void shell_sort(int *array, size_t size)
 			for (idx = xdi; idx > 0 && array[idx] < array[idx - gap]; idx -= gap)
 			{
 				swap(&array[idx], &array[idx - gap]);
-				print_array(array, size);
 			}
 		}
+		print_array(array, size);
 		gap = (gap - 1) / 3;
 	}
 }
