@@ -28,6 +28,7 @@ void swap_node(listint_t *node);
 void bubble_sort(int *array, size_t size);
 void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
+void shell_sort(int *array, size_t size);
 
 /* QuickSort helper functions */
 void quicker_sort(int *array, int lo, int hi);
