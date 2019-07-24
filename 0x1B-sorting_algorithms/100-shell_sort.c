@@ -19,9 +19,11 @@ void shell_sort(int *array, size_t size)
 	{
 		for (xdi = gap; xdi < size; xdi += gap)
 		{
-			for (idx = xdi; idx > 0 && array[idx] < array[idx - gap]; idx -= gap)
+			idx = xdi;
+			while (idx > 0 && array[idx] < array[idx - gap])
 			{
 				swap(&array[idx], &array[idx - gap]);
+				idx -= gap;
 			}
 		}
 		print_array(array, size);
@@ -38,7 +40,7 @@ void shell_sort(int *array, size_t size)
  */
 void swap(int *ptr_a, int *ptr_b)
 {
-        int tmp = *ptr_a;
-        *ptr_a = *ptr_b;
-        *ptr_b = tmp;
+	int tmp = *ptr_a;
+	*ptr_a = *ptr_b;
+	*ptr_b = tmp;
 }
