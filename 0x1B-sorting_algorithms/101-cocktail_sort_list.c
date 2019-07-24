@@ -21,7 +21,7 @@ void cocktail_sort_list(listint_t **list)
 		{
 			if (shaker->n > shaker->next->n)
 			{
-				swap_node_listint_t(list, shaker, shaker->next);
+				swap_nodes(list, shaker, shaker->next);
 				shaker = shaker->prev;
 				print_list(*list);
 				margarita++;
@@ -32,7 +32,7 @@ void cocktail_sort_list(listint_t **list)
 		{
 			if (shaker->n < shaker->prev->n)
 			{
-				swap_node_listint_t(list, shaker->prev, shaker);
+				swap_nodes(list, shaker->prev, shaker);
 				shaker = shaker->next;
 				print_list(*list);
 				margarita++;
@@ -51,7 +51,7 @@ void cocktail_sort_list(listint_t **list)
  * Description: assumes there are two nodes and tries to access total of four
  * Return: nothing!
  */
-void swap_node_listint_t(listint_t **list, listint_t *node, listint_t *another)
+void swap_nodes(listint_t **list, listint_t *node, listint_t *another)
 {
 	another->prev = node->prev;
 	node->prev = another;

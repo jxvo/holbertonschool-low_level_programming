@@ -23,7 +23,7 @@ void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 void swap(int *ptr_a, int *ptr_b);
 void swap_node(listint_t *node);
-void swap_node_listint_t(listint_t **list, listint_t *node, listint_t *another);
+void swap_nodes(listint_t **list, listint_t *node, listint_t *another);
 
 /* array sorting algorithms */
 void bubble_sort(int *array, size_t size);
