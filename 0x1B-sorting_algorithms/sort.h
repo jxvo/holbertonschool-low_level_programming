@@ -32,8 +32,8 @@ void quick_sort(int *array, size_t size);
 void shell_sort(int *array, size_t size);
 
 /* QuickSort helper functions */
-void quicker_sort(int *array, int lo, int hi);
-int partition(int *array, int lo, int hi);
+void quicker_sort(int *array, size_t size, int lo, int hi);
+int partition(int *array, size_t size, int lo, int hi);
 
 /* list sorting algorithms */
 void insertion_sort_list(listint_t **list);
