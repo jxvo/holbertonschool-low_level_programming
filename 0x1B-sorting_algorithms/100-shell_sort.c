@@ -10,30 +10,30 @@
  */
 void shell_sort(int *array, size_t size)
 {
-	size_t xdi, idx, gap = 1;
-	int temp, flag;
+	int storage, flag;
+	size_t idx, count, jump;
 
-	if (!array || size < 1)
+	if (array == NULL || size < 1)
 		return;
-
-	while (gap < size / 3)
-		gap = gap * 3 + 1;
-	for (; gap > 0; gap = gap / 3)
+	for (jump = 1; jump < size / 3; jump = jump * 3 + 1)
+	{
+	}
+	for (; jump > 0; jump = jump / 3)
 	{
 		flag = 0;
-		for (xdi = gap; xdi < size; xdi++)
+		for (idx = jump; idx < size; idx++)
 		{
-			temp = array[xdi];
-			idx = xdi;
-			while (idx >= gap && array[idx - gap] > array[xdi])
+			storage = array[idx];
+			for (count = idx; count >= jump
+				     && array[count - jump] > storage; count -= jump)
 			{
-				array[idx] = array[idx - gap];
-				idx -= gap;
+				array[count] = array[count - jump];
 			}
-			array[idx] = temp;
+			array[count] = storage;
 			flag = 1;
 		}
 		if (flag == 1)
 			print_array(array, size);
 	}
+
 }
