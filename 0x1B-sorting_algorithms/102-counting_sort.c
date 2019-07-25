@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * counting_sort - sorts an array of integers in ascending order (counting sort)
+ * counting_sort - sorts an array of ints in ascending order (counting sort)
  * @array: array of integers
  * @size: number of elements in array
  *
@@ -48,6 +48,5 @@ void counting_sort(int *array, size_t size)
 			idx++;
 		}
 	}
-
 	free(arr_count);
 }
