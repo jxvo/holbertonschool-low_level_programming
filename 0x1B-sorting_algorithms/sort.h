@@ -32,10 +32,15 @@ void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
 void shell_sort(int *array, size_t size);
 void counting_sort(int *array, size_t size);
+void merge_sort(int *array, size_t size);
 
 /* QuickSort helper functions */
 void quicker_sort(int *array, size_t size, int lo, int hi);
 int partition(int *array, size_t size, int lo, int hi);
+
+/* MergeSort helper functions */
+void mergeSort(int *array, int *temp, size_t size, size_t beg, size_t end);
+void merge(int *array, int *temp, size_t beg, size_t mid, size_t end);
 
 /* list sorting algorithms */
 void insertion_sort_list(listint_t **list);
