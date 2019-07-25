@@ -1,0 +1,52 @@
+#include "hash_tables.h"
+
+/**
+ * hash_table_set - adds an element to the hash table
+ * @ht: hash table to update
+ * @key: string key identifier
+ * @value: value associated with key
+ *
+ * Return: 1 on success, 0 on failure
+ */
+int hash_table_set(hash_table_t *ht, const char *key, const char *value)
+{
+	hash_node_t *node, *new_new;
+	unsigned long int idx;
+
+	if (!ht || !value || strlen(key) == 0)
+		return (0);
+	idx = key_index((const unsigned char *)key, ht->size);
+	node = ht->array[idx];
+	while (node)
+	{
+		if (strcmp(node->key, key) == 0)
+		{
+			if (node->value)
+				free(node->value);
+			node->value = strdup(value);
+			if (!node->value)
+				return (0);
+			return (1);
+		}
+		node = node->next;
+	}
+	new_new = malloc(sizeof(hash_node_t));
+	if (!new_new)
+		return (0);
+	new_new->key = strdup(key);
+	if (!new_new->key)
+	{
+		free(new_new);
+		return (0);
+	}
+	new_new->value = strdup(value);
+	if (!new_new->value)
+	{
+		free(new_new->key);
+		free(new_new);
+		return (0);
+	}
+	new_new->next = ht->array[idx];
+	ht->array[idx] = new_new;
+	return (1);
+}
