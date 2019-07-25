@@ -3,7 +3,7 @@
 /**
  * merge_sort - sort an array of ints in ascending order (merge sort)
  * @array: array of integers
- * @size: number of elements in array
+ * @size: number of elements in @array
  *
  * Description: implementation of the top-down merge sort algoritm
  * Return: nothing!
@@ -30,8 +30,10 @@ void merge_sort(int *array, size_t size)
 /**
  * mergeSort - recursive top-down MergeSort algorithm implementation
  * @array: array of integers
- * @adx: starting index
- * @zdx: ending index
+ * @temp: duplicate of @array
+ * @size: number of elements in @array
+ * @beg: starting index
+ * @end: ending index
  *
  * Return: nothing!
  */
@@ -60,11 +62,12 @@ void mergeSort(int *array, int *temp, size_t size, size_t beg, size_t end)
 }
 
 /**
- * merge_array - merges the array in sorted order
- * @arr: array of integers
- * @beg: beginning index of array
- * @mid: middle index of array
- * @end: ending index of array
+ * merge - merges the array in sorted order
+ * @array: array of integers
+ * @temp: duplicate of @array
+ * @beg: beginning index of @array
+ * @mid: middle index of @array
+ * @end: ending index of @array
  *
  * Return: nothing!
  */
