@@ -5,6 +5,8 @@
 #include <stdio.h>
 #include <string.h>
 
+typedef size_t st;
+
 /**
  * struct listint_s - Doubly linked list node
  *
@@ -35,6 +37,7 @@ void counting_sort(int *array, size_t size);
 void merge_sort(int *array, size_t size);
 void heap_sort(int *array, size_t size);
 void radix_sort(int *array, size_t size);
+void bitonic_sort(int *array, size_t size);
 void quick_sort_hoare(int *array, size_t size);
 
 /* QuickSort helper functions */
@@ -49,6 +52,8 @@ void merge(int *array, int *temp, size_t beg, size_t mid, size_t end);
 void radix_counting_sort(int *array, size_t size, int sig, int *buff);
 int get_max(int *array, int size);
 
+/* bitonic sort helper functions */
+void do_bitonic_sort(int *array, st size, st start, st sublen, char increasing);
 /* Hoare QuickSort helper functions */
 void swap_ints(int *a, int *b);
 int hoare_partition(int *array, size_t size, int left, int right);

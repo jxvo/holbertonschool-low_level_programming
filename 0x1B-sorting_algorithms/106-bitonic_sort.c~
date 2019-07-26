@@ -1,0 +1,13 @@
+#include "sort.h"
+
+/**
+ * bitonic_sort - sort array using bitonic merge algorithm
+ * @array: array of ints to sort
+ * @size: size of array
+ */
+void bitonic_sort(int *array, size_t size)
+{
+	if (array == NULL || size < 2)
+		return;
+	do_bitonic_sort(array, size, 0, size, 1);
+}
