@@ -35,6 +35,7 @@ void counting_sort(int *array, size_t size);
 void merge_sort(int *array, size_t size);
 void heap_sort(int *array, size_t size);
 void radix_sort(int *array, size_t size);
+void quick_sort_hoare(int *array, size_t size);
 
 /* QuickSort helper functions */
 void quicker_sort(int *array, size_t size, int lo, int hi);
@@ -47,6 +48,11 @@ void merge(int *array, int *temp, size_t beg, size_t mid, size_t end);
 /* radix sort helper functions */
 void radix_counting_sort(int *array, size_t size, int sig, int *buff);
 int get_max(int *array, int size);
+
+/* Hoare QuickSort helper functions */
+void swap_ints(int *a, int *b);
+int hoare_partition(int *array, size_t size, int left, int right);
+void hoare_sort(int *array, size_t size, int left, int right);
 
 /* list sorting algorithms */
 void insertion_sort_list(listint_t **list);
