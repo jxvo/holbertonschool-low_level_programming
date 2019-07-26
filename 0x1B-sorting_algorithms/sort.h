@@ -53,7 +53,7 @@ void radix_counting_sort(int *array, size_t size, int sig, int *buff);
 int get_max(int *array, int size);
 
 /* bitonic sort helper functions */
-void do_bitonic_sort(int *array, st size, st start, st sublen, char increasing);
+void do_bitonic_sort(int *array, st size, st start, st sublen, char inc);
 /* Hoare QuickSort helper functions */
 void swap_ints(int *a, int *b);
 int hoare_partition(int *array, size_t size, int left, int right);
